@@ -1,15 +1,16 @@
 {
-  "name": "aula03",
+  "name": "aula07",
   "version": "1.0.0",
   "description": "",
-  "main": "servidor.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node servidor.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "express": "^5.2.1"
   }
