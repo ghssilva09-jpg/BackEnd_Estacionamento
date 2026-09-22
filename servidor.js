@@ -164,6 +164,15 @@ app.get("/faturamento", (req,res)=>{
     })
 });
 
+//cancelar entrada
+app.delete("/veiculos/:id", (req, res)=>{
+    const indice = VEICULOS.findIndex( (v)=> Number(req.params.id));
+    if(indice === -1)return res.status(404).json({erro: "veiculo não encontrado"});
+
+    const [removido] = VEICULOS.splice(indice, 1);
+    return res.json({msg: " registro cancelado!"}, removido);
+})
+
 // É O QUE INICIA O SERVIDOR
 app.listen(PORT,()=>{
     console.log(`Servidor rodando em http://localhost:${PORT}`);
